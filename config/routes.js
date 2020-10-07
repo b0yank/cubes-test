@@ -9,9 +9,7 @@ module.exports = app => {
                 .then(searchResult => {
                     res.status(200).render('index', searchResult);
                 })
-                .catch(error => {
-                    throw new Error(error);
-                });
+                .catch(error => {  throw new Error(error); });
         } else {
             getCubes()
                 .then(data => {
